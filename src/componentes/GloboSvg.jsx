@@ -1,6 +1,6 @@
 const GloboSvg = ({ clickCount, setClickCount, colorGlobo, setFinConteo }) => {
   function handleBalloonClick() {
-    if (clickCount < 5) {
+    if (clickCount < 28) {
       const newClickCount = clickCount + 1
       setClickCount(newClickCount)
     } else {
