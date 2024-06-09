@@ -38,6 +38,8 @@ body {
   pointer-events: none;
   position: relative;
   transform-origin: center center;
+  top: 120px;
+  left: 180px;
   z-index: 10;
 }
 
