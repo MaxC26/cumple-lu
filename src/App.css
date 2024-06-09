@@ -1,0 +1,135 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.contenedor-body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  height: 300px;
+  position: relative;
+  width: 300px;
+  z-index: 999;
+}
+
+.giftbox {
+  animation: slideUpBig 0.3s;
+}
+
+.finger {
+  position: absolute;
+}
+
+.globo-posicion {
+  position: absolute;
+  margin-top: -60px;
+  left: 27px;
+}
+
+.onboarding {
+  animation: point 1.5s ease-out infinite;
+  pointer-events: none;
+  position: relative;
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.contenedor-felicidades {
+  width: 290px;
+  height: 450px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.928);
+  color: black;
+  font-family: 'Roboto';
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  border: #8128d0 4px dotted;
+  text-align: center;
+}
+
+.contenedor-felicidades::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 4px dotted rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  filter: blur(5px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes point {
+  0% {
+    opacity: 0;
+    top: 120px;
+    left: 180px;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 80px;
+    left: 50px;
+    transform: scale(0.25);
+  }
+}
+
+@keyframes slideUpBig {
+  0% {
+    transform: translate3d(0, 1500px, 0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* styles.css */
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.random-image {
+  position: absolute;
+  width: 100px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: 100px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  object-fit: cover;
+  animation: move 5s infinite; /* Aplica la animación aquí */
+  animation-timing-function: ease-in-out; /* Hace que el movimiento sea más suave */
+}
