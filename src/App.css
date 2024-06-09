@@ -40,6 +40,7 @@ body {
   transform-origin: center center;
   top: 120px;
   left: 180px;
+  opacity: 0;
   z-index: 10;
 }
 
