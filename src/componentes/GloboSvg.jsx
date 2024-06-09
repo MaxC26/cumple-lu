@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 const GloboSvg = ({ clickCount, setClickCount, colorGlobo, setFinConteo }) => {
   function handleBalloonClick() {
     if (clickCount < 5) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Finger from '../assets/svg/finger.51fcea9.svg'
 import ExplosionSound from '../assets/sound/balloon-pop.mp3'
 import GloboSvg from './GloboSvg'
